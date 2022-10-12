@@ -1,3 +1,25 @@
+# Maya's TLDR of How to Update the Website
+## Getting Started
+1. Install ruby and bundler. For Linux or Mac:
+   ```bash
+    sudo apt install ruby
+    sudo apt install bundler
+   ```
+2. Create a new directory and cd to it
+3. Run `git clone https://github.com/umich-BGSA/umich-BGSA.git`
+4. Add the following lines to `./.bundle/config`:
+   ```
+    ---
+    BUNDLE_PATH: "vendor/bundle"
+   ```
+5. Run `bundle install`
+6. Run `bundle exec jekyll serve --incremental`. The website can now be viewed locally at localhost:4000
+
+## What to edit
+* The content for each page is stored in a markdown file. For example, the Student Resources page can be updated by editing `./resources.md`
+* Pages can be added by editing `./_layouts/default.html`
+* CSS Styling can be changed by editing `./_sass/jekyll-theme-leap-day.scss`
+
 # The Leap day theme
 
 [![.github/workflows/ci.yaml](https://github.com/pages-themes/leap-day/actions/workflows/ci.yaml/badge.svg)](https://github.com/pages-themes/leap-day/actions/workflows/ci.yaml) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-leap-day.svg)](https://badge.fury.io/rb/jekyll-theme-leap-day)
